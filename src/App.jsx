@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // Import the components we created earlier
-import ProfileEditor from "./ProfileEditor";
+//import ProfileEditor from "./ProfileEditor";
 import RegisterForm from "./RegisterForm";
 import ShoppingCart from "./ShoppingCart";
 import TodoList from "./TodoList";
@@ -17,8 +17,8 @@ export default function MultiFeatureApp() {
         return <ShoppingCart />;
       case "todo":
         return <TodoList />;
-      case "profile":
-        return <ProfileEditor />;
+      // case "profile":
+      //   return <ProfileEditor />;
       default:
         return <div>Select a feature</div>;
     }
@@ -32,9 +32,9 @@ export default function MultiFeatureApp() {
         </button>
         <button onClick={() => setActiveFeature("cart")}>Shopping Cart</button>
         <button onClick={() => setActiveFeature("todo")}>Todo List</button>
-        <button onClick={() => setActiveFeature("profile")}>
+        {/* <button onClick={() => setActiveFeature("profile")}>
           Profile Editor
-        </button>
+        </button> */}
       </div>
       <div>{renderActiveFeature()}</div>
     </div>
